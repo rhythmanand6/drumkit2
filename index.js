@@ -1,38 +1,43 @@
-  var numberofDrum = document.querySelectorAll(".drum").length;
+ var numberofDrum = document.querySelectorAll(".drum").length;
   for(var i = 0 ; i<  numberofDrum ; i++){
-  document.querySelectorAll(".drum")[i].addEventListener("click" , function(){
-    var buttonInnerHTMl = this.innerHTMl;
-    switch ( buttonInnerHTMl) {
-      case "r":
-      var tom1 = new Audio("sounds/tom1.mp3");
-      tom1.play();
-        break;
-
-        case "h":
-        var tom2 = new Audio("sounds/tom2.mp3");
-        tom2.play();
+  document.querySelectorAll(".drum")[i].addEventListener("click" ,  function(){
+        var buttonInnerHtml = this.innerHTML;
+      switch (buttonInnerHtml) {
+        case "w":
+        var tom1 = new Audio("sounds/tom1.mp3");
+        tom1.play();
           break;
 
-          case "y":
-          var tom3 = new Audio("sounds/tom3.mp3");
-          tom3.play();
+          case "a":
+          var tom2 = new Audio("sounds/tom2.mp3");
+          tom2.play();
             break;
 
-          case "t":
-          var snare = new Audio("sounds/snare.mp3");
-          snare.play();
-            break;
+            case "s":
+            var tom3 = new Audio("sounds/tom3.mp3");
+            tom3.play();
+              break;
 
-          case "m":
-          var crash = new Audio("sounds/crash.mp3");
-          crash.play();
-            break;
-          case "j":
-          var kick = new Audio("sounds/kick-bass.mp3");
-          kick.play();
+              case "d":
+              var tom4 = new Audio("sounds/tom4.mp3");
+              tom4.play();
+                break;
+            case "j":
+            var snare = new Audio("sounds/snare.mp3");
+            snare.play();
+              break;
 
-            break;
-      default:
-    }
-  });
+            case "k":
+            var crash = new Audio("sounds/crash.mp3");
+            crash.play();
+              break;
+            case "l":
+            var kick = new Audio("sounds/kick-bass.mp3");
+            kick.play();
+
+              break;
+        default:
+
+      }
+    } );
 }
